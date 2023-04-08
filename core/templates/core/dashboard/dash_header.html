@@ -1,0 +1,237 @@
+<!doctype html>
+{% load static %}
+<html class="no-js" lang="en_GB" dir="ltr">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>
+        dispac
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static 'assets/css/mobiscroll.javascript.min.css' %}" rel="stylesheet" />
+
+    <link rel="icon" href=" /static/ " type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'dashboard/common/css/bootstrap.min.css' %} ">
+    <link rel="stylesheet" href="{% static 'dashboard/common/css/font-awesome.min.css' %} ">
+    <link rel="stylesheet" href="{% static 'dashboard/common/css/themify-icons.css' %} ">
+    <link rel="stylesheet" href="{% static 'dashboard/common/css/toastr.css' %} ">
+    <link rel="stylesheet" href="{% static 'dashboard/backend/css/metisMenu.css' %} ">
+    <link rel="stylesheet" href="{% static 'dashboard/backend/css/slicknav.min.css' %} ">
+    <link rel="stylesheet" href="{% static 'dashboard/frontend/css/flaticon.css' %} ">
+    <link rel="stylesheet" href="{% static 'dashboard/backend/css/typography.css' %} ">
+    <link rel="stylesheet" href="{% static 'dashboard/backend/css/default-css.css' %} ">
+    <link rel="stylesheet" href="{% static 'dashboard/backend/css/styles.css' %} ">
+    <link rel="stylesheet" href="{% static 'dashboard/backend/css/responsive.css' %} ">
+    <link rel="stylesheet" href="{% static 'dashboard/backend/css/fontawesome-iconpicker.min.css' %} ">
+    <link rel="stylesheet" href="{% static 'dashboard/backend/css/fontawesome.min.css' %} ">
+    <link rel="stylesheet" href="{% static 'dashboard/backend/css/flaticon.css' %} ">
+    <link rel="stylesheet" href="{% static 'dashboard/backend/css/custom-style.css' %} ">
+    <!-- modernizr css -->
+    <style>
+        .django-ckeditor-widget {
+            width: 100%;
+        }
+    </style>
+    <script src="{% static 'dashboard/common/vendor/modernizr-2.8.3.min.js' %} "></script>
+</head>
+
+<body>
+
+
+
+
+
+    <!-- preloader area start -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- preloader area end -->
+    <!-- page container area start -->
+    <div class="page-container">
+        <!-- sidebar menu area start -->
+        <div class="sidebar-menu">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <a href="/">
+                        <!-- <img src=" {% static 'dashboard/img/favicon.png " alt="dashbord" style="height:25px;"/> 
+                        <span style="font-size:20px;color:black">HOSPITANIA</span> -->
+                        <h1>Home</h1>
+                    </a>
+                </div>
+            </div>
+            <div class="main-menu">
+                <div class="menu-inner">
+
+
+                    <nav>
+                        <ul class="metismenu" id="menu">
+
+                            <li class="">
+                                <a href="" aria-expanded="true">
+                                    <i class="ti-dashboard"></i>
+                                    <span>dashboard</span>
+                                </a>
+                            </li>
+
+
+
+                            <li class="main_dropdown ">
+                                <a href="/dashboard/auth/" aria-expanded="true"><i class="ti-user"></i>
+                                    <span>auth</span> <span class="badge">3</span></a>
+                                <ul class="collapse">
+
+
+                                    <li class=""><a href="/dashboard/auth/Permission/">Permission</a>
+                                    </li>
+
+
+                                    <li class=""><a href="/dashboard/auth/Group/">Group</a>
+                                    </li>
+
+
+                                    <li class=""><a href="/dashboard/auth/User/">User</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+
+                            <li class="main_dropdown ">
+                                <a href="/dashboard/home/" aria-expanded="true"><i class="ti-user"></i>
+                                    <span>home</span> <span class="badge">2</span></a>
+                                <ul class="collapse">
+
+
+                                    <li class=""><a href="/dashboard/home/Prescriptions/">Prescriptions</a>
+                                    </li>
+
+
+                                    <li class=""><a href="/homeslider/">Home Slider</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+
+                            <li class="main_dropdown ">
+                                <a href="/dashboard/category/" aria-expanded="true"><i class="ti-user"></i>
+                                    <span>category</span> <span class="badge">4</span></a>
+                                <ul class="collapse">
+
+
+                                    <li class=""><a href="#">Category</a>
+                                    </li>
+
+
+                                    <li class=""><a href="#">Sub Category</a>
+                                    </li>
+
+
+                                    <li class=""><a href="#">Sub Sub Category</a>
+                                    </li>
+
+
+                                    <li class=""><a href="#">Brands</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+
+                            <li class="main_dropdown ">
+                                <a href="#" aria-expanded="true"><i class="ti-user"></i>
+                                    <span>order</span> <span class="badge">3</span></a>
+                                <ul class="collapse">
+
+
+                                    <li class=""><a href="#">wishitems</a>
+                                    </li>
+
+
+                                    <li class=""><a href="#">Order Item</a>
+                                    </li>
+
+
+                                    <li class=""><a href="#">update _order</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+
+                            <li class="main_dropdown ">
+                                <a href="#" aria-expanded="true"><i class="ti-user"></i>
+                                    <span>contact</span> <span class="badge">1</span></a>
+                                <ul class="collapse">
+
+
+                                    <li class=""><a href="/dashboard/contact/contact_info/">contact _info</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+
+                            <li class="main_dropdown ">
+                                <a href="/dashboard/product" aria-expanded="true"><i class="ti-user"></i>
+                                    <span>product</span> <span class="badge">4</span></a>
+                                <ul class="collapse">
+
+
+                                    <li class=""><a href="/dashboard/product/Product/">Product</a>
+                                    </li>
+
+
+                                    <li class=""><a href="/dashboard/product/Cart/">Cart</a>
+                                    </li>
+
+
+                                    <li class=""><a href="/dashboard/product/Customer_info/">Customer _info</a>
+                                    </li>
+
+
+                                    <li class=""><a href="/dashboard/product/reviews/">reviews</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+
+                            <li class="main_dropdown ">
+                                <a href="/dashboard/blog/" aria-expanded="true"><i class="ti-user"></i>
+                                    <span>blog</span> <span class="badge">1</span></a>
+                                <ul class="collapse">
+
+
+                                    <li class=""><a href="/dashboard/blog/Blogs/">Blogs</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+
+                            <li class="main_dropdown ">
+                                <a href="/dashboard/about/" aria-expanded="true"><i class="ti-user"></i>
+                                    <span>about</span> <span class="badge">1</span></a>
+                                <ul class="collapse">
+
+
+                                    <li class=""><a href="/dashboard/about/AboutUS/">About U S</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+
+
+
+
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- sidebar menu area end -->

@@ -1,0 +1,68 @@
+{% extends 'core/dashboard/base_dashboard.html' %}
+{% load static %}
+{% block title %}
+Home Slider
+{% endblock title %}
+{% block dash %}
+
+      <!--  -->
+
+      <div class="smart-card">
+        <h4 class="title">Homeslider</h4>
+        <div class="table-responsive">
+          <div class="shadow-lg p-3 mb-5 bg-white rounded">
+            <div class="my-3">
+              <a class="btn btn-primary" href="/dashboard/home/slider/add/">+Add New Home Slider
+              </a>
+            </div>
+
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Id</th>
+
+                  <th>Title</th>
+
+                  <th>Image</th>
+
+                  <th>Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for fm in form %}
+                <tr class="">
+                  <td>{{fm.id}}</td>
+                  <td>{{fm.title}}</td>
+
+                  <td>
+                    <img src="{{fm.image.url}}" style="max-height: 100px" />
+                  </td>
+
+                  <td>{{fm.date}}</td>
+
+                  <td>
+                    <a class="btn btn-primary btn-xs mb-3 mr-1"
+                      href="/dashboard/home/HomeSlider/1/edit/?next=/dashboard/home/HomeSlider/"><i
+                        class="ti-pencil"></i></a>
+                    <a tabindex="0" class="btn btn-danger btn-xs mb-3 mr-1" role="button" data-toggle="popover"
+                      data-trigger="focus" data-html="true" title="" data-content="
+                        <h6>Are you sure to delete this?</h6>
+                        <form method='get' action='/delete/fm.id/'>
+                          <input type='hidden' name='_token' value='bPNE5oytXkawNyfrysxJphne7BbyGiUJN13nlenR'>
+                          <br>
+                          <input type='submit' class='btn btn-danger btn-xs' value='Yes,Please'>
+                        </form>
+                        " data-original-title="">
+                      <i class="fa fa-solid fa fa-trash fa fa-bounce"></i>
+                    </a>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock dash %}
+    

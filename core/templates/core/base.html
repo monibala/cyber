@@ -1,0 +1,105 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+
+    <!--====== Required meta tags ======-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--====== Title ======-->
+    <title>देववाणी</title>
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="{% static 'assets/images/ambe.jpg' %}" type="image/png">
+
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+
+    <!--====== Fontawesome css ======-->
+    <link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css' %}">
+
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+
+    <!--====== nice select css ======-->
+    <link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}">
+
+    <!--====== Slick css ======-->
+    <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+
+    <!--====== stellarnav css ======-->
+    <link rel="stylesheet" href="{% static 'assets/css/stellarnav.css' %}">
+
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="{% static 'assets/css/default.css' %}">
+
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    {% block css %}
+    {% endblock css %}
+
+
+</head>
+
+<body class="home-1-bg">
+
+    {% include 'core/header.html' %}
+
+    {% block content %}
+
+
+    {% endblock content %}
+
+    {% include 'core/footer.html' %}
+
+        <!--====== PART START ======-->
+
+        <section class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-">
+    
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!--====== PART ENDS ======-->
+    
+    
+        <!--====== jquery js ======-->
+        {% block js %}
+        {% endblock js %}
+        <script src="{% static 'assets/js/vendor/modernizr-3.6.0.min.js' %}"></script>
+        <script src="{% static 'assets/js/vendor/jquery.min.js' %}"></script>
+    
+    
+        <!--====== Bootstrap js ======-->
+        <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'assets/js/popper.min.js' %}"></script>
+    
+        <!--====== Slick js ======-->
+        <script src="{% static 'assets/js/slick.min.js' %}"></script>
+    
+        <!--====== nice select js ======-->
+        <script src="{% static 'assets/js/jquery.nice-select.min.js' %}"></script>
+    
+        <!--====== stellarnav js ======-->
+        <script src="{% static 'assets/js/stellarnav.min.js' %}"></script>
+    
+        <!--====== circle progress js ======-->
+        <script src="{% static 'assets/js/circle-progress.min.js' %}"></script>
+    
+        <!--====== Magnific Popup js ======-->
+        <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+    
+        <!--====== Main js ======-->
+        <script src="{% static 'assets/js/main.js' %}"></script>
+    
+    </body>
+    
+    </html>

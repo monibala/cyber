@@ -1,0 +1,39 @@
+{% extends 'core/dashboard/base_dashboard.html' %}
+{% block title %}
+Home Slider Add
+{% endblock title %}
+{% load static %}
+{% block dash %}
+<div class="card shadow">
+    <div class="card-body">
+        <h5 class="p-2" style="border-bottom: 2px solid orange;">Add Home Slider Image</h5>
+        <div class="container-fluid">
+            <form action="/dashboard/home/slider/add/" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input type="text" name="title" class="form-control" placeholder="Title">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label>Slider Image</label>
+                            <input type="file" name="image" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="my-3">
+                    <input type="submit" value="Submit" class="m-2 px-3 btn btn-primary">
+                    <a class="btn btn-primary" href="/dashboard/home/slider/">Back To
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock dash %}
+

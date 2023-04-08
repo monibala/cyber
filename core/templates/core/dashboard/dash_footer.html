@@ -1,0 +1,133 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer-area">
+        <p>
+            &copy; Copyright 2023 . All Right Reserved By <a href="/"></a>
+        </p>
+    </div>
+</footer>
+</div>
+<script src="{% static 'assets/js/mobiscroll.javascript.min.js' %}"></script>
+<script src="{% static 'dashboard/common/js/jquery-3.6.0.min.js' %} "></script>
+<script src="{% static 'dashboard/common/js/jquery-migrate-3.3.2.min.js' %} "></script>
+<script src="{% static 'dashboard/common/js/popper.min.js' %} "></script>
+<script src="{% static 'dashboard/common/js/bootstrap.min.js' %} "></script>
+<script src="{% static 'dashboard/backend/js/metisMenu.min.js' %} "></script>
+<script src="{% static 'dashboard/backend/js/jquery.slimscroll.min.js' %} "></script>
+<script src="{% static 'dashboard/backend/js/jquery.slicknav.min.js' %} "></script>
+<script src="{% static 'dashboard/backend/js/fontawesome-iconpicker.min.js' %} "></script>
+<script src="{% static 'dashboard/common/js/toastr.min.js' %} "></script>
+<script src="{% static 'dashboard/backend/js/plugins.js' %} "></script>
+<script src="{% static 'dashboard/backend/js/scripts.js' %} "></script>
+<script>
+    (function ($) {
+        "use strict";
+
+        $('#reload').on('click', function () {
+            location.reload();
+        })
+        $('#darkmode').on('click', function () {
+            var el = $(this)
+            var mode = el.data('mode')
+            $.ajax({
+                type: 'GET',
+                url: '/admin-home/dark-mode-toggle',
+                data: {
+                    mode: mode
+                },
+                success: function () {
+                    location.reload();
+                },
+                error: function () { }
+            });
+        })
+    })(jQuery);
+</script>
+<script>
+    var ele = document.getElementsByTagName('input')
+    var ele2 = document.getElementsByTagName('textarea')
+
+    for (var i = 0; i < ele.length; i++) {
+        if (ele[i].className == '' && ele[i].getAttribute('type') != 'checkbox') {
+            ele[i].setAttribute('class', 'form-control col')
+        }
+        if (ele[i].className == 'self.fields[f.name].') {
+            ele[i].setAttribute('type', 'time')
+        }
+    }
+    for (var i = 0; i < ele2.length; i++) {
+        if (ele2[i].className == '' && ele2[i].getAttribute('type') != 'checkbox') {
+            ele2[i].setAttribute('class', 'form-control col')
+        }
+        if (ele2[i].className == 'vTimeField') {
+            ele2[i].setAttribute('type', 'time')
+        }
+    }
+    var sel = document.getElementsByTagName('select')
+    for (var i = 0; i < sel.length; i++) {
+        sel[i].setAttribute('class', 'form-control col')
+    }
+    var ele = document.getElementsByTagName('input')
+    for (var i = 0; i < ele.length; i++) {
+        if (ele[i].className == '' && ele[i].getAttribute('type') != 'checkbox') {
+            ele[i].setAttribute('class', 'form-control col')
+        }
+        if (ele[i].className == 'vTimeField') {
+            ele[i].setAttribute('type', 'time')
+        }
+        if (ele[i].className == 'vDateField') {
+            ele[i].setAttribute('type', 'date')
+            ele[i].setAttribute('class', 'form-control')
+        }
+        if (ele[i].className == 'vDateTime') {
+            ele[i].setAttribute('value', ele[i].value.replace(" ", "T"))
+            ele[i].setAttribute('type', 'datetime-local')
+            ele[i].setAttribute('class', 'form-control')
+        }
+    }
+    var sel = document.getElementsByTagName('select')
+    for (var i = 0; i < sel.length; i++) {
+        sel[i].setAttribute('class', 'form-control col')
+    }
+</script>
+<script type="text/javascript">
+    $(window).on('load', function () {
+        $('#myModal').modal('show');
+    });
+</script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.js">
+</script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.1/css/jquery.dataTables.css">
+<script>
+    $(document).ready(function () {
+        $('table').DataTable();
+    });
+    dTable = $('table').DataTable({});
+    $('input[name=table_search]').keyup(function () {
+        dTable.search($(this).val())
+            .draw(); // this  is for customized searchbox with datatable search feature.
+    })
+    $("a.related-widget-wrapper-link").on('click', function () {
+        window.open(this.href, "yyyyy", "width=480,height=360,resizable=no,toolbar=no,menubar=no,location=no,status=no");
+        return false
+    })
+</script>
+
+</body>
+
+</html>

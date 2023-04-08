@@ -1,0 +1,16 @@
+<div class="col-sm-6 clearfix">
+    <div class="user-profile pull-right">
+        {% if request.user.is_authenticated %}
+        <h4 class="user-name dropdown-toggle" data-toggle="dropdown"><i
+                class="fa fa-solid fa fa-user fa fa-flip"></i> {{request.user.first_name}}<i
+                class="fa fa-angle-down"></i></h4>
+        {% endif %}
+
+        <div class="dropdown-menu">
+
+            <a class="dropdown-item" href="/dashboard/change_password/">
+                Change Password</a>
+            <a class="dropdown-item" href=" /logout/ ">Logout</a>
+        </div>
+    </div>
+</div>

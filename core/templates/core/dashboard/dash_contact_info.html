@@ -1,0 +1,56 @@
+{% extends 'core/dashboard/base_dashboard.html' %}
+{% block title %}
+Dashboard
+{% endblock title %}
+{% load static %}
+{% block dash %}
+      <!--  -->
+
+      <div class="smart-card">
+        <h4 class="title">Contact Information</h4>
+        <div class="table-responsive">
+          <div class="shadow-lg p-3 mb-5 bg-white rounded">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Id</th>
+
+                  <th>Name</th>
+                  <th>Subject</th>
+                  <th>Email</th>
+                  <th>Message</th>
+                  <th>edit</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for con in contact %}
+                <tr class="">
+                  <td>{{con.id}}</td>
+                  <td>{{con.name}}</td>
+                  <td>{{con.subject}}</td>
+                  <td>{{con.email}}</td>
+                  <td>{{con.message}}</td>
+                  <td>
+                    <a tabindex="0" class="btn btn-danger btn-xs mb-3 mr-1" role="button" data-toggle="popover"
+                      data-trigger="focus" data-html="true" title="" data-content="
+                        <h6>Are you sure to delete this?</h6>
+                        <form method='get' action='/delete/'>
+                          <input type='hidden' name='_token' value='bPNE5oytXkawNyfrysxJphne7BbyGiUJN13nlenR'>
+                          <br>
+                          <input type='submit' class='btn btn-danger btn-xs' value='Yes,Please'>
+                        </form>
+                        " data-original-title="">
+                      <i class="fa fa-solid fa fa-trash fa fa-bounce"></i>
+                    </a>
+                  </td>
+                </tr>
+                {% endfor %}
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock dash %}
+    

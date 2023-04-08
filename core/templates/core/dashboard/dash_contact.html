@@ -1,0 +1,30 @@
+{% extends 'core/dashboard/base_dashboard.html' %}
+{% block title %}
+Dashboard
+{% endblock title %}
+{% load static %}
+{% block dash %}
+<!--  -->
+
+<div class="smart-card">
+        <h2 class="title">Dashboard Contact</h2>
+    <div class="table-responsive">
+        <div class="shadow-lg p-3 mb-5 bg-white rounded">
+            <div>
+
+                <table class="table table-striped">
+                    <tbody>
+                        <tr class="">
+                            <td style="padding: 30px 17px 3px;">
+                                <a href="/dashboard/contact/info/">
+                                    <h2 class="title">Contact Info.</h2>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock dash %}
